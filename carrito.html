@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito de Compras</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <center><h1>Tu Carrito</h1></center>
+    </header>
+    
+    <main>
+        <div class="carrito-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Producto</th>
+                        <th>Talle</th>
+                        <th>Cantidad</th>
+                        <th>Precio Total</th>
+                        <th>Eliminar</th>
+                    </tr>
+                </thead>
+                <tbody id="lista-carrito">
+                    <!-- Aquí aparecerán los productos agregados -->
+                </tbody>
+            </table>
+
+            <h3>Total a pagar: <span id="totalPrecio">0</span> ARS</h3>
+
+            <br>
+
+            <h3>Agregar un nuevo producto</h3>
+            <input type="text" id="nombreProducto" placeholder="Escribe el nombre del producto">
+            <select id="talleProducto">
+                <option value="XS">XS</option>
+                <option value="S">S</option>
+                <option value="M">M</option>
+                <option value="L">L</option>
+                <option value="XL">XL</option>
+            </select>
+            <input type="number" id="cantidadProducto" placeholder="Cantidad">
+            <input type="text" id="precioProducto" readonly placeholder="Precio automático">
+            <button onclick="agregarManual()">Agregar al carrito</button>
+
+            <br><br>
+            <button onclick="finalizarCompra()">Pagar y finalizar</button>
+        </div>
+    </main>
+
+    <script src="carrito.js"></script>
+</body>
+</html>
+
+
+
